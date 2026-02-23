@@ -1,12 +1,12 @@
 import torch
 import time
 
-N = 100_000
+N = 1000
 
 # --- CPU O(n) FP16 ---
 cpu_vec = torch.ones(N * N, dtype=torch.float16, device="cpu")
 start = time.time()
-cpu_vec = cpu_vec * 2 + cpu_vec  # simple O(n)
+cpu_vec = cpu_vec * 2 + cpu_vec  # O(n)
 end = time.time()
 print("CPU O(n) time:", end - start)
 
