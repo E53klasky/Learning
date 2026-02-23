@@ -1,7 +1,7 @@
 import torch
 import time
 
-N = 1000
+N = 25_000
 
 # --- CPU O(n) FP16 ---
 cpu_vec = torch.ones(N * N, dtype=torch.float16, device="cpu")
